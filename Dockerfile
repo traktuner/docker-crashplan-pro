@@ -15,7 +15,7 @@ ARG CRASHPLAN_BUILD=503
 ARG CRASHPLAN_URL=https://download.crashplan.com/installs/agent/cloud/${CRASHPLAN_VERSION}/${CRASHPLAN_BUILD}/install/CrashPlan_${CRASHPLAN_VERSION}_${CRASHPLAN_BUILD}_Linux.tgz
 
 # Build CrashPlan.
-FROM ubuntu:22.04 AS crashplan
+FROM ubuntu:24.04 AS crashplan
 ARG CRASHPLAN_URL
 WORKDIR /tmp
 COPY src/crashplan /build

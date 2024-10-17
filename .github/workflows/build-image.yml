@@ -8,6 +8,10 @@ env:
   DOCKER_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/crashplan-pro
   PLATFORMS: linux/amd64
 
+  permissions:
+    contents: read
+    packages: write
+
 on:
   push:
     branches: '*'

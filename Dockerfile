@@ -8,8 +8,8 @@
 ARG DOCKER_IMAGE_VERSION=
 
 # Define software versions.
-ARG CRASHPLAN_VERSION=11.4.0
-ARG CRASHPLAN_BUILD=503
+ARG CRASHPLAN_VERSION=11.5.0
+ARG CRASHPLAN_BUILD=445
 
 # Define software download URLs.
 ARG CRASHPLAN_URL=https://download.crashplan.com/installs/agent/cloud/${CRASHPLAN_VERSION}/${CRASHPLAN_BUILD}/install/CrashPlan_${CRASHPLAN_VERSION}_${CRASHPLAN_BUILD}_Linux.tgz
@@ -22,7 +22,7 @@ COPY src/crashplan /build
 RUN /build/build.sh "${CRASHPLAN_URL}"
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.16-v4.6.4
+FROM jlesage/baseimage-gui:alpine-3.20-v4.6.4
 
 ARG DOCKER_IMAGE_VERSION
 ARG CRASHPLAN_VERSION
